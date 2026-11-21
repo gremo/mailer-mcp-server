@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "mailer": {
+            "type": "streamable-http",
+            "url": "http://php"
+        }
+    }
+}

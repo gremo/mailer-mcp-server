@@ -1,0 +1,48 @@
+name: 🐞 Bug report
+description: If something isn't working 🔧
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! ❤️ Please check if this issue already exists before submitting.
+
+  - type: dropdown
+    attributes:
+      label: Where does the issue occur?
+      description: Select the environment where you can reproduce the issue.
+      options:
+        - Dev Container
+        - Docker image
+        - Both
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: OS you are running?
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Docker Engine version (if applicable)
+      description: Run `docker version --format '{{.Server.Version}}'` and paste the output.
+
+  - type: input
+    attributes:
+      label: MCP client and version (if applicable)
+
+  - type: textarea
+    attributes:
+      label: Bug description and reproduction steps
+      description: Describe what happened, what you expected, and how to reproduce it. Redact credentials and other secrets from logs or configuration.
+    validations:
+      required: true

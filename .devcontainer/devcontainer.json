@@ -1,0 +1,58 @@
+{
+    "name": "${localWorkspaceFolderBasename}",
+    "dockerComposeFile": [
+        "./../compose.dev.yaml"
+    ],
+    "service": "php",
+    "workspaceFolder": "/app",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/app/vendor/bin:/app/bin"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "[php]": {
+                    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+                },
+                "editor.codeActionsOnSave": {
+                    "source.fixAll": "always"
+                },
+                "editor.codeLens": true,
+                "editor.formatOnSave": true,
+                "editor.linkedEditing": true,
+                "files.exclude": {
+                    ".php-cs-fixer.cache": true,
+                    "public/bundles/": true,
+                    "var/": true,
+                    "vendor/": true
+                },
+                "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+                "php.completion.autoimport-docblock": "fqn",
+                "php.completion.docblock": false,
+                "php.format.codeStyle": "Off",
+                "php.inlayHints.parameters.enabled": false,
+                "php.inlayHints.types.return": false,
+                "php.problems.exclude": {
+                    "var/": true,
+                    "vendor/": true
+                },
+                "php.suggest.basic": false,
+                "php.validate.enable": false,
+                "php.version": "${containerEnv:PHP_VERSION}",
+                "phpstan.enabled": true,
+                "phpstan.initialAnalysis": false,
+                "phpstan.path": "vendor/bin/phpstan"
+            },
+            "extensions": [
+                "DEVSENSE.phptools-vscode",
+                "donjayamanne.githistory",
+                "editorconfig.editorconfig",
+                "junstyle.php-cs-fixer",
+                "mikestead.dotenv",
+                "remcohaszing.schemastore",
+                "swordev.phpstan",
+                "Symfony.language-tools"
+            ]
+        }
+    }
+}

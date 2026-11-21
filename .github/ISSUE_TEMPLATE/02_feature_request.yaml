@@ -1,0 +1,30 @@
+name: 🚀 Feature request
+description: If you have a feature request 💡
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! ❤️ Please check if this issue already exists before submitting.
+
+  - type: textarea
+    attributes:
+      label: Use case
+      description: Who would use this feature, and what are they trying to accomplish?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Describe the feature and how it should work.
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Are you willing to contribute it?
+      options:
+        - label: I can work on a pull request to implement this feature

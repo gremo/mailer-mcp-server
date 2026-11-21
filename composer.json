@@ -1,0 +1,55 @@
+{
+    "require": {
+        "php": "^8.5",
+        "guzzlehttp/psr7": "^3.6",
+        "symfony/aha-send-mailer": "^8.1",
+        "symfony/amazon-mailer": "^8.1",
+        "symfony/azure-mailer": "^8.1",
+        "symfony/brevo-mailer": "^8.1",
+        "symfony/console": "^8.1",
+        "symfony/framework-bundle": "^8.1",
+        "symfony/infobip-mailer": "^8.1",
+        "symfony/mail-pace-mailer": "^8.1",
+        "symfony/mailchimp-mailer": "^8.1",
+        "symfony/mailer": "^8.1",
+        "symfony/mailer-send-mailer": "^8.1",
+        "symfony/mailgun-mailer": "^8.1",
+        "symfony/mailjet-mailer": "^8.1",
+        "symfony/mailomat-mailer": "^8.1",
+        "symfony/mailtrap-mailer": "^8.1",
+        "symfony/mcp-bundle": "^0.15.0",
+        "symfony/microsoft-graph-mailer": "^8.1",
+        "symfony/monolog-bundle": "^4.1",
+        "symfony/postal-mailer": "^8.1",
+        "symfony/postmark-mailer": "^8.1",
+        "symfony/resend-mailer": "^8.1",
+        "symfony/runtime": "^8.1",
+        "symfony/scaleway-mailer": "^8.1",
+        "symfony/sendgrid-mailer": "^8.1",
+        "symfony/serializer": "^8.1",
+        "symfony/serializer-pack": "^1.4",
+        "symfony/sweego-mailer": "^8.1"
+    },
+    "require-dev": {
+        "ekino/phpstan-banned-code": "^3.2",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.3",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
+        },
+        "bump-after-update": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
